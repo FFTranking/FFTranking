@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FFT Ranking Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Fire Fighting Team Training</div>
+        <h1>FFT Ranking Dashboard</h1>
+      </div>
+      <div class="controls">
+        <label>Year
+          <select id="yearSelect"></select>
+        </label>
+        <label>Month
+          <select id="monthSelect"></select>
+        </label>
+        <button id="refreshBtn" title="Reload ranking.csv">Refresh Data</button>
+        <span id="status" class="status">Loading...</span>
+      </div>
+    </header>
+
+    <section class="summary">
+      <div class="champion-card" id="championCard"></div>
+      <div class="kpis">
+        <div class="kpi"><span id="kpiParticipants">0</span><small>Participants</small></div>
+        <div class="kpi"><span id="kpiBestTime">-</span><small>Best Wearing Time</small></div>
+        <div class="kpi"><span id="kpiBestCorrect">-</span><small>Best Correct Answers</small></div>
+      </div>
+    </section>
+
+    <section class="ranking-section">
+      <div class="section-title">
+        <h2>Top 10 Ranking</h2>
+        <p>Showing Correct Answers, Wearing Time and Total Score only.</p>
+      </div>
+      <div class="rank-list" id="rankList"></div>
+    </section>
+  </main>
+
+  <dialog id="profileDialog">
+    <button class="close" id="closeDialog">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
