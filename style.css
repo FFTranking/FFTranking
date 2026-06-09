@@ -74,3 +74,123 @@ dialog{border:1px solid var(--line);border-radius:28px;background:#0b111d;color:
   .app{padding:18px 14px 92px}.topbar{display:block}h1{font-size:38px;letter-spacing:-.03em}.eyebrow{font-size:12px}.controls{justify-content:flex-start;margin-top:16px;gap:10px}.controls label{width:calc(33.333% - 8px)}select,button{width:100%;min-height:54px;border-radius:19px}.status{width:100%;padding:2px 0 4px}.tabbar{position:fixed;left:12px;right:12px;bottom:12px;top:auto;margin:0;padding:8px;background:rgba(20,8,4,.78);border:1px solid var(--line);border-radius:26px;box-shadow:0 16px 45px rgba(0,0,0,.48);z-index:20}.tab{flex:1;padding:10px 7px;font-size:11px;margin:0;border-radius:20px;white-space:normal}.summary{display:block}.champion-card{grid-template-columns:1fr;padding:18px;min-height:0;border-radius:34px}.champion-card .photo-frame{height:420px;border-radius:28px}.champ-name{font-size:44px}.score-big{font-size:76px}.metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.metric{font-size:13px;text-align:center}.kpis{display:none}.section-title{display:block;margin-top:22px}.section-title h2{font-size:24px}.section-title p{font-size:12px}.rank-list{display:block;max-height:72vh;overflow-y:auto;scroll-snap-type:y proximity;padding-right:4px}.rank-card{display:grid;grid-template-columns:88px 1fr;gap:12px;align-items:center;margin-bottom:12px;border-radius:21px;padding:10px 12px;scroll-snap-align:start}.rank-no{width:34px;height:34px;border-radius:12px;font-size:14px}.rank-img{height:90px;margin:0}.rank-img .photo-frame{height:90px;border-radius:16px}.rank-name{min-height:0;font-size:17px}.rank-stats{grid-template-columns:repeat(3,1fr);gap:5px}.stat{padding:6px;text-align:center}.stat b{font-size:13px}.total{grid-column:auto}.total b{font-size:14px}.participant-list{grid-template-columns:1fr}.participant-card{grid-template-columns:84px 1fr}.dept-grid{grid-template-columns:1fr}.dept-card{grid-template-columns:82px 1fr}.donut{width:82px;height:82px}.profile{grid-template-columns:1fr}.profile .photo-frame{height:420px}
 }
 @media(max-width:420px){h1{font-size:34px}.champion-card .photo-frame{height:390px}.champ-name{font-size:39px}.controls label{width:calc(50% - 5px)}.controls button{width:100%}.metrics{grid-template-columns:1fr}.rank-stats{grid-template-columns:1fr 1fr}.total{grid-column:1/-1}}
+
+/* ===== V3.1 Desktop / PC Responsive Layout ===== */
+@media (min-width: 1000px){
+  body{overflow-x:hidden;}
+  .app{
+    max-width:1760px;
+    padding:28px;
+    display:grid;
+    grid-template-columns:minmax(760px, 1.25fr) minmax(430px, .75fr);
+    grid-template-areas:
+      "top top"
+      "dash participants"
+      "dash training";
+    gap:18px 20px;
+    align-items:start;
+  }
+  .topbar{grid-area:top;margin-bottom:0;align-items:center;}
+  .tabbar{display:none;}
+
+  /* Show all three sections on PC, but keep mobile tabs unchanged */
+  #dashboardTab,
+  #participantsTab,
+  #trainingTab{
+    display:block !important;
+    animation:none;
+  }
+  #dashboardTab{grid-area:dash;min-width:0;}
+  #participantsTab{grid-area:participants;min-width:0;}
+  #trainingTab{grid-area:training;min-width:0;}
+
+  .summary{grid-template-columns:1fr;margin-bottom:18px;}
+  .champion-card{
+    min-height:300px;
+    padding:18px;
+    grid-template-columns:260px 1fr;
+    gap:20px;
+  }
+  .champion-card .photo-frame{height:285px;}
+  .champ-name{font-size:34px;}
+  .score-big{font-size:58px;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .kpi{padding:16px;border-radius:22px;}
+  .kpi span{font-size:30px;}
+
+  .ranking-section,
+  #participantsTab,
+  #trainingTab{
+    background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.035));
+    border:1px solid var(--line);
+    border-radius:28px;
+    padding:16px;
+    box-shadow:0 20px 60px rgba(0,0,0,.22);
+    backdrop-filter:blur(18px);
+  }
+  .ranking-section{padding-bottom:10px;}
+  .rank-list{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+    max-height:calc(100vh - 535px);
+    min-height:360px;
+    overflow-y:auto;
+    padding-right:6px;
+  }
+  .rank-card{display:grid;grid-template-columns:125px 1fr;gap:12px;align-items:center;padding:12px;border-radius:22px;}
+  .rank-img{height:140px;margin-bottom:0;}
+  .rank-img .photo-frame{height:140px;border-radius:18px;}
+  .rank-name{font-size:16px;min-height:auto;}
+  .rank-stats{grid-template-columns:repeat(3,1fr);}
+  .total{grid-column:auto;}
+  .stat{padding:7px;}
+  .stat b{font-size:15px;}
+  .total b{font-size:17px;}
+  .rank-no{width:38px;height:38px;border-radius:12px;font-size:15px;}
+
+  #participantsTab .section-title,
+  #trainingTab .section-title{margin:0 0 12px;}
+  #participantsTab h2,
+  #trainingTab h2{font-size:22px;}
+  #participantsTab .section-title p,
+  #trainingTab .section-title p{font-size:12px;}
+  .participant-list{
+    grid-template-columns:1fr;
+    max-height:40vh;
+    overflow-y:auto;
+    padding-right:6px;
+  }
+  .participant-card{grid-template-columns:74px 1fr;border-radius:20px;padding:9px;}
+  .participant-photo .photo-frame{height:76px;border-radius:15px;}
+  .participant-name{font-size:15px;}
+  .participant-stats{gap:6px;}
+  .pill{font-size:11px;padding:6px 8px;}
+
+  .dept-grid{
+    grid-template-columns:1fr;
+    max-height:38vh;
+    overflow-y:auto;
+    padding-right:6px;
+  }
+  .dept-card{grid-template-columns:74px 1fr;border-radius:20px;padding:12px;}
+  .donut{width:74px;height:74px;}
+  .donut:after{inset:8px;}
+  .dept-name{font-size:16px;}
+  .dept-count{font-size:22px;}
+
+  .rank-list::-webkit-scrollbar,
+  .participant-list::-webkit-scrollbar,
+  .dept-grid::-webkit-scrollbar{width:8px;}
+  .rank-list::-webkit-scrollbar-thumb,
+  .participant-list::-webkit-scrollbar-thumb,
+  .dept-grid::-webkit-scrollbar-thumb{background:rgba(248,196,92,.35);border-radius:999px;}
+  .rank-list::-webkit-scrollbar-track,
+  .participant-list::-webkit-scrollbar-track,
+  .dept-grid::-webkit-scrollbar-track{background:rgba(255,255,255,.06);border-radius:999px;}
+}
+
+@media (min-width: 1400px){
+  .rank-list{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .champion-card{grid-template-columns:300px 1fr;}
+  .champion-card .photo-frame{height:320px;}
+}
