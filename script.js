@@ -1,7 +1,9 @@
 const CSV_FILE = 'ranking.csv';
+const DEPT_FILE = 'department_targets.csv';
 const AUTO_REFRESH_MS = 5000;
 const MONTH_ORDER = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 let allRows = [];
+let deptTargets = {};
 let currentHash = '';
 let selectedYear = '';
 let selectedMonth = '';
@@ -10,7 +12,6 @@ const $ = (id) => document.getElementById(id);
 const statusEl = $('status');
 
 function parseCSV(text){
-  // Remove UTF-8 BOM if present
   text = text.replace(/^\uFEFF/, '');
   const rows = [];
   let row = [], cell = '', inQuotes = false;
@@ -32,8 +33,8 @@ function parseCSV(text){
   return rows.slice(1).map(r => {
     const obj = {};
     headers.forEach((h,i) => obj[h] = (r[i] ?? '').trim());
-    return normalizeRow(obj);
-  }).filter(r => r.year && r.month && r.id && r.name);
+    return obj;
+  });
 }
 
 function toNumber(v){
@@ -47,22 +48,40 @@ function normalizeRow(o){
     month: String(o['Month'] || '').trim(),
     id: String(o['Employee ID'] || '').replace(/\.0$/,'').trim(),
     name: String(o['Name'] || '').trim(),
-    department: String(o['Department'] || '').trim(),
+    department: String(o['Department'] || '').trim() || 'Unspecified',
     correct: toNumber(o['Correct Answers (0-20)']),
     time: toNumber(o['Wearing Time (sec)']),
     total: toNumber(o['Total Score']),
     rank: toNumber(o['Rank'])
   };
 }
+
+async function loadDeptTargets(){
+  try{
+    const res = await fetch(DEPT_FILE + '?v=' + Date.now(), {cache:'no-store'});
+    if(!res.ok) return;
+    const rows = parseCSV(await res.text());
+    deptTargets = {};
+    rows.forEach(r => {
+      const dept = String(r['Department'] || '').trim();
+      const total = toNumber(r['Total Staff']);
+      if(dept && total > 0) deptTargets[dept] = total;
+    });
+  }catch(err){
+    console.warn('department_targets.csv not found. Department totals will use trained count only.', err);
+  }
+}
+
 async function loadCSV(force=false){
   try{
+    await loadDeptTargets();
     const res = await fetch(CSV_FILE + '?v=' + Date.now(), {cache:'no-store'});
     if(!res.ok) throw new Error('Cannot load ranking.csv');
     const text = await res.text();
-    const hash = text.length + ':' + text.slice(0,80);
+    const hash = text.length + ':' + text.slice(0,80) + ':' + JSON.stringify(deptTargets);
     if(!force && hash === currentHash) return;
     currentHash = hash;
-    allRows = parseCSV(text);
+    allRows = parseCSV(text).map(normalizeRow).filter(r => r.year && r.month && r.id && r.name);
     buildFilters();
     render();
     statusEl.textContent = 'Updated ' + new Date().toLocaleTimeString();
@@ -71,6 +90,7 @@ async function loadCSV(force=false){
     console.error(err);
   }
 }
+
 function monthIndex(value){
   const m = String(value || '').trim();
   const lower = m.toLowerCase();
@@ -92,23 +112,13 @@ function monthIndex(value){
 }
 
 function buildFilters(){
-  // Keep the original V2 UI. Only Year/Month dropdowns are rebuilt from ranking.csv.
   const years = [...new Set(allRows.map(r => String(r.year).trim()).filter(Boolean))]
     .sort((a,b) => Number(a) - Number(b) || String(a).localeCompare(String(b)));
-
   if(!years.includes(selectedYear)) selectedYear = years[years.length - 1] || '';
-
   const monthsForYear = [...new Set(
-    allRows
-      .filter(r => String(r.year).trim() === selectedYear)
-      .map(r => String(r.month).trim())
-      .filter(Boolean)
+    allRows.filter(r => String(r.year).trim() === selectedYear).map(r => String(r.month).trim()).filter(Boolean)
   )].sort((a,b) => monthIndex(a) - monthIndex(b) || String(a).localeCompare(String(b)));
-
-  if(!monthsForYear.includes(selectedMonth)) {
-    selectedMonth = monthsForYear[monthsForYear.length - 1] || '';
-  }
-
+  if(!monthsForYear.includes(selectedMonth)) selectedMonth = monthsForYear[monthsForYear.length - 1] || '';
   $('yearSelect').innerHTML = years.map(y => `<option value="${escapeHtml(y)}" ${y===selectedYear?'selected':''}>${escapeHtml(y)}</option>`).join('');
   $('monthSelect').innerHTML = monthsForYear.map(m => `<option value="${escapeHtml(m)}" ${m===selectedMonth?'selected':''}>${escapeHtml(m)}</option>`).join('');
 }
@@ -116,25 +126,71 @@ function getFiltered(){
   return allRows.filter(r => r.year===selectedYear && r.month===selectedMonth)
     .sort((a,b) => (b.total-a.total) || (b.correct-a.correct) || ((a.time||99999)-(b.time||99999)) || a.name.localeCompare(b.name));
 }
+function getParticipants(){
+  return getFiltered().filter(r => r.correct > 0 || r.time > 0 || r.total > 0);
+}
 function render(){
   const rows = getFiltered();
+  const participants = getParticipants();
   const ranked = rows.slice(0,10);
   const champion = ranked[0];
-  $('kpiParticipants').textContent = rows.length;
-  const times = rows.map(r=>r.time).filter(n=>n>0);
-  $('kpiBestTime').textContent = times.length ? Math.min(...times) + ' sec' : '-';
-  const corrects = rows.map(r=>r.correct).filter(n=>n>0);
+  $('kpiParticipants').textContent = participants.length;
+  const times = participants.map(r=>r.time).filter(n=>n>0);
+  $('kpiBestTime').textContent = times.length ? formatTime(Math.min(...times)) : '-';
+  const corrects = participants.map(r=>r.correct).filter(n=>n>0);
   $('kpiBestCorrect').textContent = corrects.length ? Math.max(...corrects) + '/20' : '-';
   renderChampion(champion);
+  renderRanking(ranked);
+  renderParticipants(participants);
+  renderDepartmentTraining(participants);
+}
+function renderRanking(ranked){
   $('rankList').innerHTML = ranked.map((r,i)=>rankCard(r,i)).join('');
   document.querySelectorAll('.rank-card').forEach((card,idx)=>{
     card.style.animationDelay = (idx*70)+'ms';
     card.addEventListener('click',()=>openProfile(ranked[idx], idx+1));
   });
 }
-function photoElement(id, cls='person-img'){
+function renderParticipants(participants){
+  if(!participants.length){
+    $('participantList').innerHTML = `<div class="participant-card"><div class="muted">No participants for this month.</div></div>`;
+    return;
+  }
+  $('participantList').innerHTML = participants.map((r,i)=>participantCard(r,i)).join('');
+  document.querySelectorAll('.participant-card').forEach((card,idx)=>card.addEventListener('click',()=>openProfile(participants[idx], idx+1)));
+}
+function renderDepartmentTraining(participants){
+  const trainedByDept = {};
+  participants.forEach(r => {
+    const dept = r.department || 'Unspecified';
+    if(!trainedByDept[dept]) trainedByDept[dept] = new Set();
+    trainedByDept[dept].add(r.id);
+  });
+  const deptNames = [...new Set([...Object.keys(deptTargets), ...Object.keys(trainedByDept)])]
+    .sort((a,b)=>a.localeCompare(b));
+  if(!deptNames.length){
+    $('deptGrid').innerHTML = `<div class="dept-card"><div class="muted">No department data.</div></div>`;
+    return;
+  }
+  $('deptGrid').innerHTML = deptNames.map(dept => {
+    const trained = trainedByDept[dept] ? trainedByDept[dept].size : 0;
+    const total = deptTargets[dept] || trained || 0;
+    const pct = total ? Math.min(100, Math.round((trained/total)*100)) : 0;
+    const angle = Math.round(360 * pct / 100);
+    return `<article class="dept-card">
+      <div class="donut" style="--angle:${angle}deg"><span>${pct}%</span></div>
+      <div>
+        <div class="dept-name">${escapeHtml(dept)}</div>
+        <div class="dept-count">${trained}/${total}</div>
+        <div class="meta">Trained / Total Staff</div>
+        <div class="progress"><div class="bar" style="--pct:${pct}%"></div></div>
+      </div>
+    </article>`;
+  }).join('');
+}
+function photoElement(id){
   const base = `photos/${id}`;
-  return `<img class="${cls}" src="${base}.jpg" alt="" data-base="${base}" data-step="0" onerror="nextPhoto(this)">`;
+  return `<div class="photo-frame"><img class="person-img" src="${base}.jpg" alt="" data-base="${base}" data-step="0" onerror="nextPhoto(this)"></div>`;
 }
 window.nextPhoto = function(img){
   const exts = ['.jpeg','.png','.webp'];
@@ -143,7 +199,8 @@ window.nextPhoto = function(img){
     img.dataset.step = step + 1;
     img.src = img.dataset.base + exts[step];
   }else{
-    img.outerHTML = `<div class="placeholder">NO PHOTO<br>${escapeHtml(img.dataset.base.split('/').pop())}</div>`;
+    const id = escapeHtml(img.dataset.base.split('/').pop());
+    img.parentElement.innerHTML = `<div class="placeholder">NO PHOTO<br>${id}</div>`;
   }
 }
 function renderChampion(r){
@@ -168,12 +225,28 @@ function rankCard(r,i){
   return `<article class="rank-card ${i===0?'top1':''}">
     <div class="rank-no">${medal}</div>
     <div class="rank-img">${photoElement(r.id)}</div>
-    <div class="rank-name">${escapeHtml(r.name)}</div>
-    <div class="rank-dept">${escapeHtml(r.department)} · ID ${escapeHtml(r.id)}</div>
-    <div class="rank-stats">
-      <div class="stat"><small>Correct</small><b>${formatCorrect(r.correct)}</b></div>
-      <div class="stat"><small>Time</small><b>${formatTime(r.time)}</b></div>
-      <div class="stat total"><small>Total Score</small><b>${formatScore(r.total)}</b></div>
+    <div>
+      <div class="rank-name">${escapeHtml(r.name)}</div>
+      <div class="rank-dept">${escapeHtml(r.department)} · ID ${escapeHtml(r.id)}</div>
+      <div class="rank-stats">
+        <div class="stat"><small>Correct</small><b>${formatCorrect(r.correct)}</b></div>
+        <div class="stat"><small>Time</small><b>${formatTime(r.time)}</b></div>
+        <div class="stat total"><small>Total Score</small><b>${formatScore(r.total)}</b></div>
+      </div>
+    </div>
+  </article>`;
+}
+function participantCard(r,i){
+  return `<article class="participant-card">
+    <div class="participant-photo">${photoElement(r.id)}</div>
+    <div>
+      <div class="participant-name">${escapeHtml(r.name)}</div>
+      <div class="rank-dept">${escapeHtml(r.department)} · ID ${escapeHtml(r.id)}</div>
+      <div class="participant-stats">
+        <span class="pill">Correct ${formatCorrect(r.correct)}</span>
+        <span class="pill">Time ${formatTime(r.time)}</span>
+        <span class="pill gold">Total ${formatScore(r.total)}</span>
+      </div>
     </div>
   </article>`;
 }
@@ -194,14 +267,32 @@ function openProfile(r, rankNo){
   </div>`;
   $('profileDialog').showModal();
 }
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===name));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  $(`${name}Tab`).classList.add('active');
+}
 function formatScore(n){ return Number(n||0).toFixed(2).replace(/\.00$/,''); }
 function formatCorrect(n){ return n ? `${n}/20` : '-'; }
-function formatTime(n){ return n ? `${n} sec` : '-'; }
+function formatTime(n){
+  if(!n) return '-';
+  const total = Math.round(Number(n));
+  if(total >= 3600){
+    const h = Math.floor(total/3600), m = Math.floor((total%3600)/60), s = total%60;
+    return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  }
+  if(total >= 60){
+    const m = Math.floor(total/60), s = total%60;
+    return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  }
+  return `${total} sec`;
+}
 function escapeHtml(s){ return String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m])); }
 
 $('yearSelect').addEventListener('change',e=>{selectedYear=e.target.value; selectedMonth=''; buildFilters(); render();});
 $('monthSelect').addEventListener('change',e=>{selectedMonth=e.target.value; render();});
 $('refreshBtn').addEventListener('click',()=>loadCSV(true));
 $('closeDialog').addEventListener('click',()=>$('profileDialog').close());
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>switchTab(btn.dataset.tab)));
 loadCSV(true);
 setInterval(()=>loadCSV(false), AUTO_REFRESH_MS);
