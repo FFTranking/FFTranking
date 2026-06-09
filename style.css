@@ -46,7 +46,7 @@ button:active{transform:scale(.97)}
 .champion-card:before{content:"";position:absolute;inset:-2px;background:linear-gradient(120deg,transparent 0%,rgba(248,196,92,.18) 35%,transparent 60%);animation:shine 4s linear infinite}
 @keyframes shine{from{transform:translateX(-80%)}to{transform:translateX(80%)}}
 .photo-frame{width:100%;height:310px;border-radius:24px;background:rgba(255,255,255,.06);border:1px solid var(--line);overflow:hidden;display:block;position:relative}
-.person-img{width:100%;height:100%;object-fit:cover;object-position:center 13%;display:block;transform:scale(1.08);transform-origin:center center;transition:transform .35s ease, filter .35s ease}
+.person-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transform:scale(1.20);transform-origin:center top;transition:transform .35s ease, filter .35s ease}
 .rank-card:hover .person-img,.participant-card:hover .person-img{transform:scale(1.13);filter:saturate(1.12) contrast(1.04)}
 .placeholder{width:100%;height:100%;border-radius:inherit;border:1px dashed rgba(255,255,255,.24);background:rgba(255,255,255,.045);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-weight:900;letter-spacing:.12em;text-align:center;line-height:1.5}
 .champ-info{position:relative;z-index:2}
