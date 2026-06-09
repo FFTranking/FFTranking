@@ -1,33 +1,33 @@
 Year,Month,Employee ID,Name,Department,Correct Answers (0-20),Wearing Time (sec),Exam Score,Time Score,Total Score,Rank
 2026,June,100183,Mr. Tanakrit P.,Front Office,,,0,0,0,25
-2026,June,100206,Mr. Chanavit C.,Front Office,17,58,42.5,3.33,45.83,18
-2026,June,100142,Mr. Warut J.,Front Office,16,51,40,15,55,10
+2026,June,100206,Mr. Chanavit C.,Front Office,17,58,42.5,5.9,48.4,18
+2026,June,100142,Mr. Warut J.,Front Office,16,51,40,23.05,63.05,10
 2026,June,100479,Mr. Phairoj C.,Front Office,,,0,0,0,25
-2026,June,100498,Mr. Methee M.,Front Office,19,58,47.5,3.33,50.83,14
+2026,June,100498,Mr. Methee M.,Front Office,19,58,47.5,5.9,53.4,17
 2026,June,100140,Mr. Phun C.,Front Office,,,0,0,0,25
-2026,June,100324,Mr. Boonlert P.,Front Office,18,46,45,23.33,68.33,1
-2026,June,100413,Mr. Prasert P.,Front Office,16,49,40,18.33,58.33,6
+2026,June,100324,Mr. Boonlert P.,Front Office,18,46,45,35.3,80.3,1
+2026,June,100413,Mr. Prasert P.,Front Office,16,49,40,27.95,67.95,6
 2026,June,100577,Mr. Sukrit C.,Front Office,,,0,0,0,25
-2026,June,100642,Mr. Rotthasen C.,Front Office,17,59,42.5,1.67,44.17,19
+2026,June,100642,Mr. Rotthasen C.,Front Office,17,59,42.5,3.45,45.95,20
 2026,June,100646,Mr. Suphakorn L.,Front Office,,,0,0,0,25
-2026,June,100484,Mr. Paween S.,F&B,18,53,45,11.67,56.67,7
+2026,June,100484,Mr. Paween S.,F&B,18,53,45,18.15,63.15,8
 2026,June,100128,Mr. Taworn C.,F&B,,,0,0,0,25
-2026,June,100224,Mr. Jirawit S.,F&B,17,60,42.5,1,43.5,20
+2026,June,100224,Mr. Jirawit S.,F&B,17,60,42.5,1,43.5,21
 2026,June,100346,Mr. Wisan P.,F&B,,,0,0,0,25
-2026,June,100468,Mr. Watcharawit M.,F&B,16,54,40,10,50,15
+2026,June,100468,Mr. Watcharawit M.,F&B,16,54,40,15.7,55.7,14
 2026,June,100474,Mr. Nawapan J.,F&B,,,0,0,0,25
-2026,June,100636,Mr. Chaiyawat K.,F&B,17,52,42.5,13.33,55.83,9
+2026,June,100636,Mr. Chaiyawat K.,F&B,17,52,42.5,20.6,63.1,9
 2026,June,100451,Mr. Peeradon P.,F&B,,,0,0,0,25
-2026,June,100605,Mr. Phassakorn S.,F&B,14,59,35,1.67,36.67,23
+2026,June,100605,Mr. Phassakorn S.,F&B,14,59,35,3.45,38.45,24
 2026,June,100429,Mr. Wanchaloem M.,F&B,,,0,0,0,25
-2026,June,100637,Mr. Pongssathorn W.,F&B,15,53,37.5,11.67,49.17,16
-2026,June,100411,Mr. Peerapong S.,FBK,14,57,35,5,40,21
-2026,June,100268,Mr.Yee V.,FBK,15,51,37.5,15,52.5,13
+2026,June,100637,Mr. Pongssathorn W.,F&B,15,53,37.5,18.15,55.65,15
+2026,June,100411,Mr. Peerapong S.,FBK,14,57,35,8.35,43.35,22
+2026,June,100268,Mr.Yee V.,FBK,15,51,37.5,23.05,60.55,11
 2026,June,100416,Mr. Burapa P.,FBK,,,0,0,0,25
-2026,June,100329,Mr. Wirawat T.,FBK,15,59,37.5,1.67,39.17,22
-2026,June,100264,Mr. Wutthikarai K.,FBK,18,55,45,8.33,53.33,11
-2026,June,100617,Mr. Nuttawat D.,FBK,16,50,40,16.67,56.67,7
-2026,June,100507,Mr. Apichart,FBK,17,50,42.5,16.67,59.17,5
+2026,June,100329,Mr. Wirawat T.,FBK,15,59,37.5,3.45,40.95,23
+2026,June,100264,Mr. Wutthikarai K.,FBK,18,55,45,13.25,58.25,12
+2026,June,100617,Mr. Nuttawat D.,FBK,16,50,40,25.5,65.5,7
+2026,June,100507,Mr. Apichart,FBK,17,50,42.5,25.5,68,5
 2026,June,100488,Mr. Saifa I.,FBK,,,0,0,0,25
 2026,June,100436,Mr. Wihok K.,FBK,,,0,0,0,25
 2026,June,800089,Mr. Panya P.,FBK,,,0,0,0,25
@@ -35,12 +35,12 @@ Year,Month,Employee ID,Name,Department,Correct Answers (0-20),Wearing Time (sec)
 2026,June,100585,Mr. Thanawut S.,FBK,,,0,0,0,25
 2026,June,100229,Mr. Siwawong P.,Housekeeping,,,0,0,0,25
 2026,June,100227,Mr. Kunchai C.,Housekeeping,,,0,0,0,25
-2026,June,100487,Mr. Puwanat P.,Housekeeping,12,50,30,16.67,46.67,17
-2026,June,100460,Mr. Aphichart S.,Housekeeping,16,47,40,21.67,61.67,4
-2026,June,100427,Mr. Tatchapol P.,Housekeeping,16,45,40,25,65,2
-2026,June,100400,Mr. Arnon T.,Housekeeping,17,48,42.5,20,62.5,3
+2026,June,100487,Mr. Puwanat P.,Housekeeping,12,50,30,25.5,55.5,16
+2026,June,100460,Mr. Aphichart S.,Housekeeping,16,47,40,32.85,72.85,4
+2026,June,100427,Mr. Tatchapol P.,Housekeeping,16,45,40,37.75,77.75,2
+2026,June,100400,Mr. Arnon T.,Housekeeping,17,48,42.5,30.4,72.9,3
 2026,June,100524,Mr. Suriya S.,Housekeeping,,,0,0,0,25
-2026,June,100277,Mr. Thawitchat S.,Housekeeping,18,55,45,8.33,53.33,11
+2026,June,100277,Mr. Thawitchat S.,Housekeeping,18,55,45,13.25,58.25,12
 2026,June,100360,Mr. Waranan P.,Housekeeping,,,0,0,0,25
 2026,June,100522,Mr. Pitak K.,Housekeeping,,,0,0,0,25
 2026,June,100543,Mr. Watthana Y.,Housekeeping,,,0,0,0,25
@@ -57,7 +57,7 @@ Year,Month,Employee ID,Name,Department,Correct Answers (0-20),Wearing Time (sec)
 2026,June,100073,Mr. Sitthichai C.,Engineering,,,0,0,0,25
 2026,June,100545,Mr. Anukul N.,Engineering,,,0,0,0,25
 2026,June,100540,Mr. Chatchapon S.,Engineering,,,0,0,0,25
-2026,June,100574,Mr. Saharat S.,Security,,41,0,31.67,31.67,24
+2026,June,100574,Mr. Saharat S.,Security,,41,0,47.55,47.55,19
 2026,June,100281,Miss. Piraporn S.,Security,,,0,0,0,25
 2026,June,100532,Mr. Nattapong M.,Security,,,0,0,0,25
 2026,June,100548,Mr. Phonchai K.,Security,,,0,0,0,25
