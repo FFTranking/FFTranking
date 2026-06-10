@@ -142,7 +142,7 @@ function render(){
   renderChampion(champion);
   renderRanking(ranked);
   renderParticipants(participants);
-  renderDepartmentTraining(participants);
+  renderDepartmentTraining(rows, participants);
 }
 function renderRanking(ranked){
   $('rankList').innerHTML = ranked.map((r,i)=>rankCard(r,i)).join('');
@@ -159,34 +159,85 @@ function renderParticipants(participants){
   $('participantList').innerHTML = participants.map((r,i)=>participantCard(r,i)).join('');
   document.querySelectorAll('.participant-card').forEach((card,idx)=>card.addEventListener('click',()=>openProfile(participants[idx], idx+1)));
 }
-function renderDepartmentTraining(participants){
-  const trainedByDept = {};
-  participants.forEach(r => {
+function renderDepartmentTraining(rows, participants){
+  const monthlyByDept = {};
+  const trainedIds = new Set(participants.map(r => r.id));
+
+  rows.forEach((r) => {
     const dept = r.department || 'Unspecified';
-    if(!trainedByDept[dept]) trainedByDept[dept] = new Set();
-    trainedByDept[dept].add(r.id);
+    if(!monthlyByDept[dept]) monthlyByDept[dept] = new Map();
+    if(r.id) monthlyByDept[dept].set(r.id, r);
   });
-  const deptNames = [...new Set([...Object.keys(deptTargets), ...Object.keys(trainedByDept)])]
-    .sort((a,b)=>a.localeCompare(b));
+
+  const deptNames = Object.keys(monthlyByDept).sort((a,b) => {
+    const trainedA = [...monthlyByDept[a].values()].filter(r => trainedIds.has(r.id)).length;
+    const trainedB = [...monthlyByDept[b].values()].filter(r => trainedIds.has(r.id)).length;
+    return (trainedB - trainedA) || a.localeCompare(b);
+  });
+
   if(!deptNames.length){
     $('deptGrid').innerHTML = `<div class="dept-card"><div class="muted">No department data.</div></div>`;
     return;
   }
-  $('deptGrid').innerHTML = deptNames.map(dept => {
-    const trained = trainedByDept[dept] ? trainedByDept[dept].size : 0;
-    const total = deptTargets[dept] || trained || 0;
-    const pct = total ? Math.min(100, Math.round((trained/total)*100)) : 0;
+
+  $('deptGrid').innerHTML = deptNames.map((dept, idx) => {
+    const allMembers = [...monthlyByDept[dept].values()].sort((a,b) => (a.name || '').localeCompare(b.name || ''));
+    const trainedMembers = allMembers.filter(m => trainedIds.has(m.id));
+    const notYetMembers = allMembers.filter(m => !trainedIds.has(m.id));
+    const trained = trainedMembers.length;
+    const total = allMembers.length || trained || 0;
+    const pct = total ? Math.round((trained / total) * 100) : 0;
     const angle = Math.round(360 * pct / 100);
-    return `<article class="dept-card">
+    const medal = idx === 0 ? '🏆' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : '👥';
+
+    const trainedList = trainedMembers.map(m => `
+      <button class="dept-member trained" type="button" data-id="${escapeHtml(m.id)}">
+        <span class="check">✓</span>
+        <span class="member-name">${escapeHtml(m.name)}</span>
+        <span class="member-meta">ID ${escapeHtml(m.id)} · Total ${formatScore(m.total)}</span>
+      </button>
+    `).join('');
+
+    const notYetList = notYetMembers.map(m => `
+      <button class="dept-member not-yet" type="button" data-id="${escapeHtml(m.id)}">
+        <span class="check">–</span>
+        <span class="member-name">${escapeHtml(m.name)}</span>
+        <span class="member-meta">ID ${escapeHtml(m.id)} · Not yet trained</span>
+      </button>
+    `).join('');
+
+    return `<article class="dept-card dept-participation-card">
       <div class="donut" style="--angle:${angle}deg"><span>${pct}%</span></div>
-      <div>
-        <div class="dept-name">${escapeHtml(dept)}</div>
+      <div class="dept-main">
+        <div class="dept-name">${medal} ${escapeHtml(dept)}</div>
         <div class="dept-count">${trained}/${total}</div>
-        <div class="meta">Trained / Total Staff</div>
+        <div class="meta">${trained} trained from ${total} employees this month</div>
         <div class="progress"><div class="bar" style="--pct:${pct}%"></div></div>
+
+        <details class="dept-details" ${idx < 2 ? 'open' : ''}>
+          <summary>Trained employees (${trained})</summary>
+          <div class="dept-member-list">${trainedList || '<div class="muted small-note">No trained employees yet.</div>'}</div>
+        </details>
+
+        ${notYetMembers.length ? `
+        <details class="dept-details not-yet-details">
+          <summary>Not yet trained (${notYetMembers.length})</summary>
+          <div class="dept-member-list">${notYetList}</div>
+        </details>` : ''}
       </div>
     </article>`;
   }).join('');
+
+  document.querySelectorAll('.dept-member').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id;
+      const person = rows.find(p => p.id === id);
+      if(person){
+        const rankNo = participants.findIndex(p => p.id === id) + 1;
+        openProfile(person, rankNo > 0 ? rankNo : '-');
+      }
+    });
+  });
 }
 function photoElement(id){
   const base = `photos/${id}`;

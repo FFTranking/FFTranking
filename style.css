@@ -194,3 +194,23 @@ dialog{border:1px solid var(--line);border-radius:28px;background:#0b111d;color:
   .champion-card{grid-template-columns:300px 1fr;}
   .champion-card .photo-frame{height:320px;}
 }
+
+/* ===== Monthly Department Completion Fix ===== */
+.dept-count{
+  color:var(--text);
+}
+.small-note{
+  padding:8px 4px;
+  font-size:12px;
+}
+.dept-member.not-yet{
+  opacity:.78;
+  border-style:dashed;
+}
+.dept-member.not-yet .check{
+  background:rgba(255,255,255,.08);
+  color:var(--muted);
+}
+.not-yet-details summary{
+  color:var(--muted);
+}
