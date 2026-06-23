@@ -1,67 +1,67 @@
 Year,Month,Employee ID,Name,Department,Correct Answers (0-20),Wearing Time (sec),Exam Score,Time Score,Total Score,Rank
-2026,June,100183,Mr. Tanakrit P.,Front Office,,,0,0,0,50
-2026,June,100206,Mr. Chanavit C.,Front Office,17,58,42.5,26.67,69.17,29
-2026,June,100142,Mr. Warut J.,Front Office,16,51,40,32.5,72.5,22
-2026,June,100479,Mr. Phairoj C.,Front Office,,,0,0,0,50
-2026,June,100498,Mr. Methee M.,Front Office,19,58,47.5,26.67,74.17,15
-2026,June,100140,Mr. Phun C.,Front Office,15,59,37.5,25.83,63.33,41
-2026,June,100324,Mr. Boonlert P.,Front Office,18,46,45,36.67,81.67,4
-2026,June,100413,Mr. Prasert P.,Front Office,16,49,40,34.17,74.17,15
-2026,June,100577,Mr. Sukrit C.,Front Office,16,38,40,43.33,83.33,3
-2026,June,100642,Mr. Rotthasen C.,Front Office,17,59,42.5,25.83,68.33,32
-2026,June,100646,Mr. Suphakorn L.,Front Office,,,0,0,0,50
-2026,June,100484,Mr. Paween S.,F&B,18,53,45,30.83,75.83,12
-2026,June,100128,Mr. Taworn C.,F&B,16,56,40,28.33,68.33,32
-2026,June,100224,Mr. Jirawit S.,F&B,17,60,42.5,25,67.5,35
-2026,June,100346,Mr. Wisan P.,F&B,14,48,35,35,70,25
-2026,June,100468,Mr. Watcharawit M.,F&B,16,54,40,30,70,25
-2026,June,100474,Mr. Nawapan J.,F&B,14,55,35,29.17,64.17,40
-2026,June,100636,Mr. Chaiyawat K.,F&B,17,52,42.5,31.67,74.17,15
-2026,June,100451,Mr. Peeradon P.,F&B,,,0,0,0,50
-2026,June,100605,Mr. Phassakorn S.,F&B,14,59,35,25.83,60.83,45
-2026,June,100429,Mr. Wanchaloem M.,F&B,,,0,0,0,50
-2026,June,100637,Mr. Pongssathorn W.,F&B,15,53,37.5,30.83,68.33,32
-2026,June,100411,Mr. Peerapong S.,FBK,14,57,35,27.5,62.5,44
-2026,June,100268,Mr.Yee V.,FBK,15,51,37.5,32.5,70,25
-2026,June,100416,Mr. Burapa P.,FBK,,,0,0,0,50
-2026,June,100329,Mr. Wirawat T.,FBK,15,59,37.5,25.83,63.33,41
-2026,June,100264,Mr. Wutthikarai K.,FBK,18,55,45,29.17,74.17,15
-2026,June,100617,Mr. Nuttawat D.,FBK,16,50,40,33.33,73.33,21
-2026,June,100507,Mr. Apichart,FBK,17,50,42.5,33.33,75.83,12
-2026,June,100488,Mr. Saifa I.,FBK,,,0,0,0,50
+2026,June,100183,Mr. Tanakrit P.,Front Office,16,50,40,33.33,73.33,25
+2026,June,100206,Mr. Chanavit C.,Front Office,17,58,42.5,26.67,69.17,35
+2026,June,100142,Mr. Warut J.,Front Office,16,51,40,32.5,72.5,27
+2026,June,100479,Mr. Phairoj C.,Front Office,18,55,45,29.17,74.17,18
+2026,June,100498,Mr. Methee M.,Front Office,19,58,47.5,26.67,74.17,18
+2026,June,100140,Mr. Phun C.,Front Office,15,59,37.5,25.83,63.33,47
+2026,June,100324,Mr. Boonlert P.,Front Office,18,46,45,36.67,81.67,6
+2026,June,100413,Mr. Prasert P.,Front Office,16,49,40,34.17,74.17,18
+2026,June,100577,Mr. Sukrit C.,Front Office,16,38,40,43.33,83.33,5
+2026,June,100642,Mr. Rotthasen C.,Front Office,17,59,42.5,25.83,68.33,38
+2026,June,100646,Mr. Suphakorn L.,Front Office,17,50,42.5,33.33,75.83,14
+2026,June,100484,Mr. Paween S.,F&B,18,53,45,30.83,75.83,14
+2026,June,100128,Mr. Taworn C.,F&B,16,56,40,28.33,68.33,38
+2026,June,100224,Mr. Jirawit S.,F&B,17,60,42.5,25,67.5,41
+2026,June,100346,Mr. Wisan P.,F&B,14,48,35,35,70,31
+2026,June,100468,Mr. Watcharawit M.,F&B,16,54,40,30,70,31
+2026,June,100474,Mr. Nawapan J.,F&B,14,55,35,29.17,64.17,46
+2026,June,100636,Mr. Chaiyawat K.,F&B,17,52,42.5,31.67,74.17,18
+2026,June,100451,Mr. Peeradon P.,F&B,,,0,0,0,57
+2026,June,100605,Mr. Phassakorn S.,F&B,14,59,35,25.83,60.83,51
+2026,June,100429,Mr. Wanchaloem M.,F&B,,,0,0,0,57
+2026,June,100637,Mr. Pongssathorn W.,F&B,15,53,37.5,30.83,68.33,38
+2026,June,100411,Mr. Peerapong S.,FBK,14,57,35,27.5,62.5,50
+2026,June,100268,Mr.Yee V.,FBK,15,51,37.5,32.5,70,31
+2026,June,100416,Mr. Burapa P.,FBK,,,0,0,0,57
+2026,June,100329,Mr. Wirawat T.,FBK,15,59,37.5,25.83,63.33,47
+2026,June,100264,Mr. Wutthikarai K.,FBK,18,55,45,29.17,74.17,18
+2026,June,100617,Mr. Nuttawat D.,FBK,16,50,40,33.33,73.33,25
+2026,June,100507,Mr. Apichart,FBK,17,50,42.5,33.33,75.83,14
+2026,June,100488,Mr. Saifa I.,FBK,,,0,0,0,57
 2026,June,100436,Mr. Wihok K.,FBK,19,26,47.5,50,97.5,1
-2026,June,800089,Mr. Panya P.,FBK,16,49,40,34.17,74.17,15
-2026,June,100593,Mr. Sarunyu M.,FBK,,,0,0,0,50
-2026,June,100585,Mr. Thanawut S.,FBK,,,0,0,0,50
-2026,June,100229,Mr. Siwawong P.,Housekeeping,17,54,42.5,30,72.5,22
-2026,June,100227,Mr. Kunchai C.,Housekeeping,13,46,32.5,36.67,69.17,29
-2026,June,100487,Mr. Puwanat P.,Housekeeping,12,50,30,33.33,63.33,41
-2026,June,100460,Mr. Aphichart S.,Housekeeping,16,47,40,35.83,75.83,12
-2026,June,100427,Mr. Tatchapol P.,Housekeeping,16,45,40,37.5,77.5,10
-2026,June,100400,Mr. Arnon T.,Housekeeping,17,48,42.5,35,77.5,10
-2026,June,100524,Mr. Suriya S.,Housekeeping,,,0,0,0,50
-2026,June,100277,Mr. Thawitchat S.,Housekeeping,18,55,45,29.17,74.17,15
-2026,June,100360,Mr. Waranan P.,Housekeeping,20,53,50,30.83,80.83,6
-2026,June,100522,Mr. Pitak K.,Housekeeping,15,57,37.5,27.5,65,39
-2026,June,100543,Mr. Watthana Y.,Housekeeping,18,58,45,26.67,71.67,24
-2026,June,100359,Mr. Nattawit N.,Housekeeping,17,58,42.5,26.67,69.17,29
-2026,June,100569,Mr. Tanasid S.,Housekeeping,15,39,37.5,42.5,80,7
-2026,June,800091,Mr. Nutchapon P.,Housekeeping,17,39,42.5,42.5,85,2
+2026,June,800089,Mr. Panya P.,FBK,16,49,40,34.17,74.17,18
+2026,June,100593,Mr. Sarunyu M.,FBK,20,44,50,38.33,88.33,3
+2026,June,100585,Mr. Thanawut S.,FBK,,,0,0,0,57
+2026,June,100229,Mr. Siwawong P.,Housekeeping,17,54,42.5,30,72.5,27
+2026,June,100227,Mr. Kunchai C.,Housekeeping,13,46,32.5,36.67,69.17,35
+2026,June,100487,Mr. Puwanat P.,Housekeeping,12,50,30,33.33,63.33,47
+2026,June,100460,Mr. Aphichart S.,Housekeeping,16,47,40,35.83,75.83,14
+2026,June,100427,Mr. Tatchapol P.,Housekeeping,16,45,40,37.5,77.5,12
+2026,June,100400,Mr. Arnon T.,Housekeeping,17,48,42.5,35,77.5,12
+2026,June,100524,Mr. Suriya S.,Housekeeping,20,39,50,42.5,92.5,2
+2026,June,100277,Mr. Thawitchat S.,Housekeeping,18,55,45,29.17,74.17,18
+2026,June,100360,Mr. Waranan P.,Housekeeping,20,53,50,30.83,80.83,8
+2026,June,100522,Mr. Pitak K.,Housekeeping,15,57,37.5,27.5,65,45
+2026,June,100543,Mr. Watthana Y.,Housekeeping,18,58,45,26.67,71.67,29
+2026,June,100359,Mr. Nattawit N.,Housekeeping,17,58,42.5,26.67,69.17,35
+2026,June,100569,Mr. Tanasid S.,Housekeeping,15,39,37.5,42.5,80,9
+2026,June,800091,Mr. Nutchapon P.,Housekeeping,17,39,42.5,42.5,85,4
 ,,,,,,,0,0,,
 ,,,,,,,0,0,,
-2026,June,100062,Mr. Prajuab Y.,Engineering,17,43,42.5,39.17,81.67,4
-2026,June,100042,Mr. Phusit S.,Engineering,15,56,37.5,28.33,65.83,38
-2026,June,100309,Mr. Tanasit C.,Engineering,16,42,40,40,80,7
-2026,June,100601,Mr. Virat T.,Engineering,,,0,0,0,50
-2026,June,100583,Mr. Thanawat N.,Engineering,18,60,45,25,70,25
-2026,June,100073,Mr. Sitthichai C.,Engineering,17,60,42.5,25,67.5,35
-2026,June,100545,Mr. Anukul N.,Engineering,17,60,42.5,25,67.5,35
-2026,June,100540,Mr. Chatchapon S.,Engineering,17,45,42.5,37.5,80,7
-2026,June,100574,Mr. Saharat S.,Security,,41,0,40.83,40.83,48
-2026,June,100281,Miss. Piraporn S.,Security,,54,0,30,30,49
-2026,June,100532,Mr. Nattapong M.,Security,,40,0,41.67,41.67,46
-2026,June,100548,Mr. Phonchai K.,Security,,40,0,41.67,41.67,46
-2026,June,800090,Mr. Arak P.,Security,,,0,0,0,50
+2026,June,100062,Mr. Prajuab Y.,Engineering,17,43,42.5,39.17,81.67,6
+2026,June,100042,Mr. Phusit S.,Engineering,15,56,37.5,28.33,65.83,44
+2026,June,100309,Mr. Tanasit C.,Engineering,16,42,40,40,80,9
+2026,June,100601,Mr. Virat T.,Engineering,16,52,40,31.67,71.67,29
+2026,June,100583,Mr. Thanawat N.,Engineering,18,60,45,25,70,31
+2026,June,100073,Mr. Sitthichai C.,Engineering,17,60,42.5,25,67.5,41
+2026,June,100545,Mr. Anukul N.,Engineering,17,60,42.5,25,67.5,41
+2026,June,100540,Mr. Chatchapon S.,Engineering,17,45,42.5,37.5,80,9
+2026,June,100574,Mr. Saharat S.,Security,,41,0,40.83,40.83,55
+2026,June,100281,Miss. Piraporn S.,Security,,54,0,30,30,56
+2026,June,100532,Mr. Nattapong M.,Security,,40,0,41.67,41.67,53
+2026,June,100548,Mr. Phonchai K.,Security,,40,0,41.67,41.67,53
+2026,June,800090,Mr. Arak P.,Security,,34,0,46.67,46.67,52
 2026,May,100183,Mr. Tanakrit P.,Front Office,18,,45,0,45,40
 2026,May,100206,Mr. Chanavit C.,Front Office,20,,50,0,50,1
 2026,May,100142,Mr. Warut J.,Front Office,20,,50,0,50,1
