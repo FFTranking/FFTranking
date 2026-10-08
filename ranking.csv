@@ -183,131 +183,130 @@ Year,Month,Employee ID,Name,Department,Correct Answers (0-20),Wearing Time (sec)
 2026,August,100281,Miss. Piraporn S.,Security,,34,0,46.67,46.67,61
 2026,August,100532,Mr. Nattapong M.,Security,,36,0,45,45,62
 2026,August,100650,Mr. Arak P.,Security,,27,0,50,50,60
-2026,September,100183,Mr. Tanakrit P.,Front Office,,,0,0,0,1
-2026,September,100206,Mr. Chanavit C.,Front Office,,,0,0,0,1
-2026,September,100142,Mr. Warut J.,Front Office,,,0,0,0,1
-2026,September,100479,Mr. Phairoj C.,Front Office,,,0,0,0,1
-2026,September,100498,Mr. Methee M.,Front Office,,,0,0,0,1
-2026,September,100140,Mr. Phun C.,Front Office,,,0,0,0,1
-2026,September,100324,Mr. Boonlert P.,Front Office,,,0,0,0,1
-2026,September,100413,Mr. Prasert P.,Front Office,,,0,0,0,1
-2026,September,100577,Mr. Sukrit C.,Front Office,,,0,0,0,1
-2026,September,100642,Mr. Rotthasen C.,Front Office,,,0,0,0,1
-2026,September,100646,Mr. Suphakorn L.,Front Office,,,0,0,0,1
-2026,September,100484,Mr. Paween S.,F&B,,,0,0,0,1
-2026,September,100128,Mr. Taworn C.,F&B,,,0,0,0,1
-2026,September,100224,Mr. Jirawit S.,F&B,,,0,0,0,1
-2026,September,100346,Mr. Wisan P.,F&B,,,0,0,0,1
-2026,September,100468,Mr. Watcharawit M.,F&B,,,0,0,0,1
-2026,September,100474,Mr. Nawapan J.,F&B,,,0,0,0,1
-2026,September,100636,Mr. Chaiyawat K.,F&B,,,0,0,0,1
-2026,September,100451,Mr. Peeradon P.,F&B,,,0,0,0,1
-2026,September,100605,Mr. Phassakorn S.,F&B,,,0,0,0,1
-2026,September,100429,Mr. Wanchaloem M.,F&B,,,0,0,0,1
-2026,September,100637,Mr. Pongssathorn W.,F&B,,,0,0,0,1
-2026,September,100411,Mr. Peerapong S.,FBK,,,0,0,0,1
-2026,September,100268,Mr.Yee V.,FBK,,,0,0,0,1
-2026,September,100416,Mr. Burapa P.,FBK,,,0,0,0,1
-2026,September,100329,Mr. Wirawat T.,FBK,,,0,0,0,1
-2026,September,100264,Mr. Wutthikarai K.,FBK,,,0,0,0,1
-2026,September,100617,Mr. Nuttawat D.,FBK,,,0,0,0,1
-2026,September,100507,Mr. Apichart,FBK,,,0,0,0,1
-2026,September,100488,Mr. Saifa I.,FBK,,,0,0,0,1
-2026,September,100436,Mr. Wihok K.,FBK,,,0,0,0,1
-2026,September,100649,Mr. Panya P.,FBK,,,0,0,0,1
-2026,September,100593,Mr. Sarunyu M.,FBK,,,0,0,0,1
-2026,September,100585,Mr. Thanawut S.,FBK,,,0,0,0,1
-2026,September,100229,Mr. Siwawong P.,Housekeeping,,,0,0,0,1
-2026,September,100227,Mr. Kunchai C.,Housekeeping,,,0,0,0,1
-2026,September,100487,Mr. Puwanat P.,Housekeeping,,,0,0,0,1
-2026,September,100460,Mr. Aphichart S.,Housekeeping,,,0,0,0,1
-2026,September,100427,Mr. Tatchapol P.,Housekeeping,,,0,0,0,1
-2026,September,100400,Mr. Arnon T.,Housekeeping,,,0,0,0,1
-2026,September,100524,Mr. Suriya S.,Housekeeping,,,0,0,0,1
-2026,September,100277,Mr. Thawitchat S.,Housekeeping,,,0,0,0,1
-2026,September,100360,Mr. Waranan P.,Housekeeping,,,0,0,0,1
-2026,September,100522,Mr. Pitak K.,Housekeeping,,,0,0,0,1
-2026,September,100543,Mr. Watthana Y.,Housekeeping,,,0,0,0,1
-2026,September,100359,Mr. Nattawit N.,Housekeeping,,,0,0,0,1
-2026,September,100569,Mr. Tanasid S.,Housekeeping,,,0,0,0,1
-2026,September,800091,Mr. Nutchapon P.,Housekeeping,,,0,0,0,1
-2026,September,800096,Mr. Manoo A.,Housekeeping,,,0,0,0,1
-2026,September,100062,Mr. Prajuab Y.,Engineering,,,0,0,0,1
-2026,September,100042,Mr. Phusit S.,Engineering,,,0,0,0,1
-2026,September,100309,Mr. Tanasit C.,Engineering,,,0,0,0,1
-2026,September,100601,Mr. Virat T.,Engineering,,,0,0,0,1
-2026,September,100583,Mr. Thanawat N.,Engineering,,,0,0,0,1
-2026,September,100073,Mr. Sitthichai C.,Engineering,,,0,0,0,1
-2026,September,100545,Mr. Anukul N.,Engineering,,,0,0,0,1
-2026,September,100540,Mr. Chatchapon S.,Engineering,,,0,0,0,1
-2026,September,100653,Mr. Amphon I.,Engineering,,,0,0,0,1
-2026,September,100574,Mr. Saharat S.,Security,,,0,0,0,1
-2026,September,100281,Miss. Piraporn S.,Security,,,0,0,0,1
-2026,September,100532,Mr. Nattapong M.,Security,,,0,0,0,1
-2026,September,100650,Mr. Arak P.,Security,,,0,0,0,1
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,September,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-2026,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
-,,,,,,,0,0,,
+2026,September,100183,Mr. Tanakrit P.,Front Office,19,26.95,47.5,50,97.5,19
+2026,September,100206,Mr. Chanavit C.,Front Office,20,33.42,50,47.15,97.15,24
+2026,September,100142,Mr. Warut J.,Front Office,20,26.19,50,50,100,9
+2026,September,100479,Mr. Phairoj C.,Front Office,18,45,45,37.5,82.5,55
+2026,September,100498,Mr. Methee M.,Front Office,20,43,50,39.17,89.17,44
+2026,September,100140,Mr. Phun C.,Front Office,20,43,50,39.17,89.17,44
+2026,September,100324,Mr. Boonlert P.,Front Office,20,40,50,41.67,91.67,38
+2026,September,100413,Mr. Prasert P.,Front Office,18,40.56,45,41.2,86.2,51
+2026,September,100577,Mr. Sukrit C.,Front Office,20,23.13,50,50,100,6
+2026,September,100642,Mr. Rotthasen C.,Front Office,19,39.66,47.5,41.95,89.45,42
+2026,September,100484,Mr. Paween S.,F&B,20,35,50,45.83,95.83,27
+2026,September,100128,Mr. Taworn C.,F&B,20,47.3,50,35.58,85.58,53
+2026,September,100224,Mr. Jirawit S.,F&B,20,35.4,50,45.5,95.5,29
+2026,September,100346,Mr. Wisan P.,F&B,20,23.02,50,50,100,5
+2026,September,100468,Mr. Watcharawit M.,F&B,20,37.9,50,43.42,93.42,34
+2026,September,100474,Mr. Nawapan J.,F&B,19,28.5,47.5,50,97.5,22
+2026,September,100636,Mr. Chaiyawat K.,F&B,20,23.82,50,50,100,7
+2026,September,100451,Mr. Peeradon P.,F&B,20,39.09,50,42.43,92.43,36
+2026,September,100605,Mr. Phassakorn S.,F&B,19,34,47.5,46.67,94.17,31
+2026,September,100429,Mr. Wanchaloem M.,F&B,20,50.68,50,32.77,82.77,54
+2026,September,100637,Mr. Pongssathorn W.,F&B,20,46,50,36.67,86.67,50
+2026,September,100411,Mr. Peerapong S.,FBK,17,35.16,42.5,45.7,88.2,48
+2026,September,100268,Mr.Yee V.,FBK,20,42.95,50,39.21,89.21,43
+2026,September,100416,Mr. Burapa P.,FBK,20,54.4,50,29.67,79.67,57
+2026,September,100329,Mr. Wirawat T.,FBK,20,44,50,38.33,88.33,47
+2026,September,100264,Mr. Wutthikarai K.,FBK,20,30.76,50,49.37,99.37,14
+2026,September,100617,Mr. Nuttawat D.,FBK,20,28.25,50,50,100,12
+2026,September,100507,Mr. Apichart,FBK,18,38.68,45,42.77,87.77,49
+2026,September,100488,Mr. Saifa I.,FBK,20,35.2,50,45.67,95.67,28
+2026,September,100436,Mr. Wihok K.,FBK,20,19.52,50,50,100,1
+2026,September,100649,Mr. Panya P.,FBK,19,26.97,47.5,50,97.5,20
+2026,September,100593,Mr. Sarunyu M.,FBK,20,40,50,41.67,91.67,38
+2026,September,100585,Mr. Thanawut S.,FBK,20,37,50,44.17,94.17,32
+2026,September,100229,Mr. Siwawong P.,Housekeeping,20,25.15,50,50,100,8
+2026,September,100227,Mr. Kunchai C.,Housekeeping,19,36.73,47.5,44.39,91.89,37
+2026,September,100487,Mr. Puwanat P.,Housekeeping,20,32.61,50,47.83,97.83,15
+2026,September,100460,Mr. Aphichart S.,Housekeeping,20,27.63,50,50,100,11
+2026,September,100427,Mr. Tatchapol P.,Housekeeping,20,26.36,50,50,100,10
+2026,September,100400,Mr. Arnon T.,Housekeeping,20,47,50,35.83,85.83,52
+2026,September,100524,Mr. Suriya S.,Housekeeping,19,21.79,47.5,50,97.5,16
+2026,September,100277,Mr. Thawitchat S.,Housekeeping,20,36,50,45,95,30
+2026,September,100360,Mr. Waranan P.,Housekeeping,19,48,47.5,35,82.5,56
+2026,September,100522,Mr. Pitak K.,Housekeeping,19,26.41,47.5,50,97.5,18
+2026,September,100543,Mr. Watthana Y.,Housekeeping,20,21.68,50,50,100,2
+2026,September,100359,Mr. Nattawit N.,Housekeeping,20,37,50,44.17,94.17,32
+2026,September,100569,Mr. Tanasid S.,Housekeeping,19,22.15,47.5,50,97.5,17
+2026,September,800091,Mr. Nutchapon P.,Housekeeping,20,22.56,50,50,100,4
+2026,September,800096,Mr. Manoo A.,Housekeeping,19,28,47.5,50,97.5,21
+2026,September,100062,Mr. Prajuab Y.,Engineering,20,29.05,50,50,100,13
+2026,September,100042,Mr. Phusit S.,Engineering,19,40.99,47.5,40.84,88.34,46
+2026,September,100309,Mr. Tanasit C.,Engineering,19,28.55,47.5,50,97.5,23
+2026,September,100601,Mr. Virat T.,Engineering,20,38.85,50,42.63,92.63,35
+2026,September,100583,Mr. Thanawat N.,Engineering,19,30.79,47.5,49.34,96.84,26
+2026,September,100073,Mr. Sitthichai C.,Engineering,20,41,50,40.83,90.83,40
+2026,September,100545,Mr. Anukul N.,Engineering,19,39.38,47.5,42.18,89.68,41
+2026,September,100540,Mr. Chatchapon S.,Engineering,19,30.43,47.5,49.64,97.14,25
+2026,September,100653,Mr. Amphon I.,Engineering,20,21.83,50,50,100,3
+2026,September,100574,Mr. Saharat S.,Security,,17,0,50,50,58
+2026,September,100281,Miss. Piraporn S.,Security,,34,0,46.67,46.67,61
+2026,September,100532,Mr. Nattapong M.,Security,,36,0,45,45,62
+2026,September,100650,Mr. Arak P.,Security,,27,0,50,50,59
+2026,September,100660,Mr. Anan T.,Security,,30,0,50,50,60
+2026,October,100183,Mr. Tanakrit P.,Front Office,,,0,0,0,1
+2026,October,100206,Mr. Chanavit C.,Front Office,,,0,0,0,1
+2026,October,100142,Mr. Warut J.,Front Office,,,0,0,0,1
+2026,October,100479,Mr. Phairoj C.,Front Office,,,0,0,0,1
+2026,October,100498,Mr. Methee M.,Front Office,,,0,0,0,1
+2026,October,100140,Mr. Phun C.,Front Office,,,0,0,0,1
+2026,October,100324,Mr. Boonlert P.,Front Office,,,0,0,0,1
+2026,October,100413,Mr. Prasert P.,Front Office,,,0,0,0,1
+2026,October,100577,Mr. Sukrit C.,Front Office,,,0,0,0,1
+2026,October,100642,Mr. Rotthasen C.,Front Office,,,0,0,0,1
+2026,October,100484,Mr. Paween S.,F&B,,,0,0,0,1
+2026,October,100128,Mr. Taworn C.,F&B,,,0,0,0,1
+2026,October,100224,Mr. Jirawit S.,F&B,,,0,0,0,1
+2026,October,100346,Mr. Wisan P.,F&B,,,0,0,0,1
+2026,October,100468,Mr. Watcharawit M.,F&B,,,0,0,0,1
+2026,October,100474,Mr. Nawapan J.,F&B,,,0,0,0,1
+2026,October,100636,Mr. Chaiyawat K.,F&B,,,0,0,0,1
+2026,October,100451,Mr. Peeradon P.,F&B,,,0,0,0,1
+2026,October,100605,Mr. Phassakorn S.,F&B,,,0,0,0,1
+2026,October,100429,Mr. Wanchaloem M.,F&B,,,0,0,0,1
+2026,October,100637,Mr. Pongssathorn W.,F&B,,,0,0,0,1
+2026,October,100411,Mr. Peerapong S.,FBK,,,0,0,0,1
+2026,October,100268,Mr.Yee V.,FBK,,,0,0,0,1
+2026,October,100416,Mr. Burapa P.,FBK,,,0,0,0,1
+2026,October,100329,Mr. Wirawat T.,FBK,,,0,0,0,1
+2026,October,100264,Mr. Wutthikarai K.,FBK,,,0,0,0,1
+2026,October,100617,Mr. Nuttawat D.,FBK,,,0,0,0,1
+2026,October,100507,Mr. Apichart,FBK,,,0,0,0,1
+2026,October,100488,Mr. Saifa I.,FBK,,,0,0,0,1
+2026,October,100436,Mr. Wihok K.,FBK,,,0,0,0,1
+2026,October,100649,Mr. Panya P.,FBK,,,0,0,0,1
+2026,October,100593,Mr. Sarunyu M.,FBK,,,0,0,0,1
+2026,October,100585,Mr. Thanawut S.,FBK,,,0,0,0,1
+2026,October,100229,Mr. Siwawong P.,Housekeeping,,,0,0,0,1
+2026,October,100227,Mr. Kunchai C.,Housekeeping,,,0,0,0,1
+2026,October,100487,Mr. Puwanat P.,Housekeeping,,,0,0,0,1
+2026,October,100460,Mr. Aphichart S.,Housekeeping,,,0,0,0,1
+2026,October,100427,Mr. Tatchapol P.,Housekeeping,,,0,0,0,1
+2026,October,100400,Mr. Arnon T.,Housekeeping,,,0,0,0,1
+2026,October,100524,Mr. Suriya S.,Housekeeping,,,0,0,0,1
+2026,October,100277,Mr. Thawitchat S.,Housekeeping,,,0,0,0,1
+2026,October,100360,Mr. Waranan P.,Housekeeping,,,0,0,0,1
+2026,October,100522,Mr. Pitak K.,Housekeeping,,,0,0,0,1
+2026,October,100543,Mr. Watthana Y.,Housekeeping,,,0,0,0,1
+2026,October,100359,Mr. Nattawit N.,Housekeeping,,,0,0,0,1
+2026,October,100569,Mr. Tanasid S.,Housekeeping,,,0,0,0,1
+2026,October,800091,Mr. Nutchapon P.,Housekeeping,,,0,0,0,1
+2026,October,800096,Mr. Manoo A.,Housekeeping,,,0,0,0,1
+2026,October,100062,Mr. Prajuab Y.,Engineering,,,0,0,0,1
+2026,October,100042,Mr. Phusit S.,Engineering,,,0,0,0,1
+2026,October,100309,Mr. Tanasit C.,Engineering,,,0,0,0,1
+2026,October,100601,Mr. Virat T.,Engineering,,,0,0,0,1
+2026,October,100583,Mr. Thanawat N.,Engineering,,,0,0,0,1
+2026,October,100073,Mr. Sitthichai C.,Engineering,,,0,0,0,1
+2026,October,100545,Mr. Anukul N.,Engineering,,,0,0,0,1
+2026,October,100540,Mr. Chatchapon S.,Engineering,,,0,0,0,1
+2026,October,100653,Mr. Amphon I.,Engineering,,,0,0,0,1
+2026,October,100574,Mr. Saharat S.,Security,,,0,0,0,1
+2026,October,100281,Miss. Piraporn S.,Security,,,0,0,0,1
+2026,October,100532,Mr. Nattapong M.,Security,,,0,0,0,1
+2026,October,100650,Mr. Arak P.,Security,,,0,0,0,1
+2026,October,100660,Mr. Anan T.,Security,,,0,0,0,1
 ,,,,,,,0,0,,
 ,,,,,,,0,0,,
 ,,,,,,,0,0,,
